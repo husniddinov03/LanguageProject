@@ -1,0 +1,8 @@
+:root{
+    --indicatorCount: 50%
+}
+
+.lang-item-stat{
+    color: lightcoral;
+    background-image: linear-gradient(to right, chartreuse 0%,  green var(--indicatorCount), white var(--indicatorCount) );
+}

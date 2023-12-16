@@ -1,0 +1,81 @@
+@mixin text($size, $weight, $color) {
+    font-size: $size;
+    font-weight: $weight;
+    color: $color;
+}
+
+.lang {
+    height: 100vh;
+
+    .lang-box {
+        .lang-text {
+
+            h1 {
+                @include text(35px, 700, red);
+                background-color: rgba(0, 0, 139, 0.782);
+                padding: 10px;
+                margin-top: 40px;
+            }
+
+            p {
+                @include text(24px, 400, aqua);
+                background: rgba(218, 112, 214, 0.719);
+                padding: 20px;
+            }
+        }
+
+        img {
+            width: 530px;
+            height: 380px;
+        }
+
+        .lang-link-box {
+            margin-top: 30px;
+            margin-left: 20px;
+            display: inline-block;
+            animation: rotate 1s infinite alternate-reverse;
+
+            .lang-link {
+                @include text(25px, 600, white);
+                text-transform: uppercase;
+                font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+                background-color: cornflowerblue;
+                padding: 8px;
+                border-radius: 10px;
+
+            }
+        }
+    }
+}
+
+
+@media (max-width: 1330px) {
+    .lang {
+        .lang-box {
+            .lang-media {
+                gap: 40px;
+            }
+        }
+    }
+}
+
+@media (max-width: 480px) {
+    .lang {
+        width: 100%;
+
+        .lang-box {
+            width: 100%;
+
+            .lang-media {
+
+                iframe {
+                    width: 100%;
+                }
+
+                img {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
