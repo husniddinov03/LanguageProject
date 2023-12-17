@@ -2,11 +2,12 @@ import React, { useState } from 'react'; import {
     MenuFoldOutlined,
     MenuUnfoldOutlined,
     VideoCameraOutlined,
+    AppstoreOutlined,
+    CheckOutlined
 } from '@ant-design/icons';
 import { UseInfoContext } from '../../Context/UseInfoContext';
 import { Layout, Menu, Button, theme } from 'antd';
 import Home from '../Home/Home';
-import { AiFillAppstore, AiFillCheckSquare } from "react-icons/ai";
 import Unfinished from '../Unfinished/Unfinished';
 import Complated from '../Complated/Complated';
 
@@ -40,7 +41,7 @@ const NavPage = () => {
                     items={[
                         {
                             key: '1',
-                            icon: <AiFillAppstore />,
+                            icon: <AppstoreOutlined />,
                             label: 'All Courses ',
                         },
                         {
@@ -50,7 +51,7 @@ const NavPage = () => {
                         },
                         {
                             key: '3',
-                            icon: <AiFillCheckSquare />,
+                            icon: <CheckOutlined />,
                             label: 'Complated',
                         },
                     ]}

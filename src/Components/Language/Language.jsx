@@ -2,8 +2,8 @@ import React, { useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import "./Style/Style.scss"
 import { UseInfoContext } from '../../Context/UseInfoContext'
-import { AiOutlineHome } from "react-icons/ai";
-
+// import { ArrowLeftOutlined } from "ant-design/icons";
+import {LeftOutlined} from '@ant-design/icons'
 import UzbekFlag from "./LangImages/UzbekistanFlagHD.jpg"
 import RussianFlag from "./LangImages/RussiaFlagHD.jpg"
 import EnglandFlag from "./LangImages/EnglandflagHD.avif"
@@ -34,7 +34,7 @@ const Language = () => {
         <div className='lang'>
             <div className="back-btn pb-3 d-flex">
                 <Link to='/'>
-                    <button className='fw-bold border-0 flex gap-2 text-light'><AiOutlineHome style={{ fontSize: "20px" }} /> Back to Home</button>
+                    <button className='fw-bold border-0 flex gap-2 text-light'><LeftOutlined /> Back to Home</button>
                 </Link>
             </div>
 

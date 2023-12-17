@@ -3,8 +3,7 @@ import "./Style/Test.scss"
 // import questions from './questions'
 import { UseInfoContext } from '../../Context/UseInfoContext';
 import { Link } from 'react-router-dom';
-import { AiOutlineHome } from "react-icons/ai";
-
+import { LeftOutlined } from '@ant-design/icons'
 
 const Test = () => {
 
@@ -353,24 +352,23 @@ const Test = () => {
 
         <div className='quiz container mt-5'>
 
-            {
-                showFinalResult ?
-                    <div className="back-btn pb-3 d-flex">
-                        <Link to='/'>
-                            <button className='fw-bold border-0 flex gap-2 text-light'><AiOutlineHome style={{ fontSize: "20px" }} /> Back to Home</button>
-                        </Link>
-                    </div>
-                    : <></>
-            }
+
+            {showFinalResult ?
+                <div className="back-btn pb-3 d-flex">
+                    <Link to='/'>
+                        <button className='fw-bold border-0 flex gap-2 text-light'><LeftOutlined style={{ fontSize: "20px" }} /> Back to Home</button>
+                    </Link>
+                </div>
+                : <></>}
+
 
             <h1 className='text-center'>Quiz app</h1>
-            {showFinalResult ?
-                <div className="final-result flex gap-2" >
-                    <h1 className='bg-light p-1 text-danger'>Final Result</h1>
-                    <h2> <span className='text-info'>{score}</span>  out of <span className='text-info'>{questions.length}</span> correct - (<span className='text-info'>{(score / questions.length) * 100}%</span> )</h2>
+            {showFinalResult ? <div className="final-result flex gap-2" >
+                <h1 className='bg-light p-1 text-danger'>Final Result</h1>
+                <h2> <span className='text-info'>{score}</span>  out of <span className='text-info'>{questions.length}</span> correct - (<span className='text-info'>{(score / questions.length) * 100}%</span> )</h2>
 
-                    <button onClick={() => restartQuiz()} className='bg-danger border-0 text-light text-center d-inline-block'>Restart Quiz</button>
-                </div > :
+                <button onClick={() => restartQuiz()} className='bg-danger border-0 text-light text-center d-inline-block'>Restart Quiz</button>
+            </div > :
 
                 <div className="question-card text-center text-light">
                     <h2>Question {currentQuestions + 1} out of {questions.length}</h2>
