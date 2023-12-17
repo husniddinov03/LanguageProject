@@ -9,6 +9,7 @@ const Complated = () => {
   useEffect(() => {
     const filteredComplated = allData.filter(datas => datas.enterPage.enterTest === true);
     setComplatedLang(filteredComplated)
+    localStorage.setItem('languages', JSON.stringify(allData))
   }, [])
 
 

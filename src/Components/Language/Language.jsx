@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 import "./Style/Style.scss"
 import { UseInfoContext } from '../../Context/UseInfoContext'
 // import { ArrowLeftOutlined } from "ant-design/icons";
-import {LeftOutlined} from '@ant-design/icons'
+import { LeftOutlined } from '@ant-design/icons'
 import UzbekFlag from "./LangImages/UzbekistanFlagHD.jpg"
 import RussianFlag from "./LangImages/RussiaFlagHD.jpg"
 import EnglandFlag from "./LangImages/EnglandflagHD.avif"
@@ -13,21 +13,23 @@ import TurkianFlag from "./LangImages/TurkianFlagHD.jpg"
 
 const Language = () => {
 
-    const { langId,allData, setUnFinishedLang, setComplatedLang, presentContent,  trueContentPresent } = UseInfoContext()
+    const { langId, allData, setUnFinishedLang, setComplatedLang, presentContent, trueContentPresent } = UseInfoContext()
 
     useEffect(() => {
-        
+
         const filteredUnFinished = allData.filter(datas => datas.enterPage.enterCourse === true);
         setUnFinishedLang(filteredUnFinished);
-        
+
         const filteredComplated = allData.filter(datas => datas.enterPage.enterTest === true);
         setComplatedLang(filteredComplated)
+
+        
     }, [allData]);
 
     const filteredPageTest = (filData) => {
         return filData.enterPage.enterTest = true
     }
-    
+
     console.log(presentContent);
 
     return (

@@ -7,11 +7,15 @@ import { LeftOutlined } from '@ant-design/icons'
 
 const Test = () => {
 
+
+
     const [showFinalResult, setShowFinalResult] = useState(false)
     const [score, setScore] = useState(0)
     const [currentQuestions, setCurrentQuestions] = useState(0)
 
-    const { questionsActive } = UseInfoContext()
+    const { questionsActive, allData } = UseInfoContext()
+
+    localStorage.setItem('languages', JSON.stringify(allData))
 
     const questions =
 

@@ -18,6 +18,7 @@ const Home = () => {
         const findedLang = allData?.find(lang => lang.id === id);
         setLangId([findedLang])
         trueContentPresent(item, itemName)
+        localStorage.setItem('languages', JSON.stringify(allData))
     }
 
     return (

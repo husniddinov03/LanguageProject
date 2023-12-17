@@ -9,6 +9,7 @@ const Unfinished = () => {
   useEffect(() => {
     const filteredUnFinished = allData.filter(datas => datas.enterPage.enterCourse === true && datas.enterPage.enterTest !== true);
     setUnFinishedLang(filteredUnFinished)
+    localStorage.setItem('languages', JSON.stringify(allData))
   }, [])
 
   return (
